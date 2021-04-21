@@ -1,6 +1,19 @@
 .gridStyle{
     align-items: center;
     align-content: center;
+
+}
+.paper{
     text-align: center;
-    color: aqua;
+    color:chartreuse;
+    width: '100%';
+    margin: '0px';
+}
+.introStyle{
+    text-align: center;
+}
+.divStyle{
+    align-items: center;
+    align-content: center;
+    background-color: aqua;
 }

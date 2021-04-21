@@ -1,10 +1,12 @@
-import Grid from './Grid'
+import MyGrid from './MyGrid';
 import './Styles.css'
+import Intro from './Intro'
 
 function App() {
   return (
     <>
-      <Grid />
+      <Intro />
+      <MyGrid />
     </>
   );
 }
