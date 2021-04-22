@@ -5,8 +5,10 @@ import Intro from './Intro'
 function App() {
   return (
     <>
-      <Intro />
-      <MyGrid />
+      <div className='background'>
+        <Intro />
+        <MyGrid />
+        </div>
     </>
   );
 }
