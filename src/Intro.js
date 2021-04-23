@@ -5,7 +5,7 @@ function Intro() {
         <>
 
             <div className='introStyle'>
-                Welcome to tictactoe
+                tictactoe
             </div>
             <div className='introStyle2'>
 
