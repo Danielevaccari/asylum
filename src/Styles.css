@@ -6,7 +6,9 @@
     text-align: center;
     height: 100px;
     background: linear-gradient(0deg,lightgrey 40%,rgb(210, 170, 243) 150%);
-    font-size: 100px;
+    font-size: 4vw;
+    color: rgb(81, 65, 110);
+    font-family: fantasy;
 }
 .introStyle2{
     text-align: center;
@@ -18,13 +20,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: rgb(130, 138, 138);
+    background-color: black 70%;
     text-align: center;
-    width: 30%;
-    border: 2px solid black;
+    width: 30vw;
 }
-.divStyle:after {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
