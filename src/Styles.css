@@ -1,13 +1,13 @@
 .background{
     height: 100vh;
-    background: linear-gradient(180deg,lightgrey 40%,rgb(200, 142, 247) 100%);
+    background: linear-gradient(180deg,lightgrey 40%,rgb(83, 71, 52) 100%);
 }
 .introStyle{
     text-align: center;
     height: 100px;
-    background: linear-gradient(0deg,lightgrey 40%,rgb(210, 170, 243) 150%);
+    background: linear-gradient(0deg,lightgrey 40%,rgb(83, 71, 52)150%);
     font-size: 4vw;
-    color: rgb(81, 65, 110);
+    color: rgb(83, 71, 52);
     font-family: fantasy;
 }
 .introStyle2{

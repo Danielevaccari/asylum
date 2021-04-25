@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 function MyGrid() {
 
     const classes = useStyles()
+    //Defines if gridcomponent is elevated
     const [ele0, updateEle0] = useState(true)
     const [ele1, updateEle1] = useState(true)
     const [ele2, updateEle2] = useState(true)
@@ -28,33 +29,93 @@ function MyGrid() {
     const [ele6, updateEle6] = useState(true)
     const [ele7, updateEle7] = useState(true)
     const [ele8, updateEle8] = useState(true)
+    //Sets O||X in gridcomponents
+    const [sign0, setSign0] = useState('_')
+    const [sign1, setSign1] = useState('_')
+    const [sign2, setSign2] = useState('_')
+    const [sign3, setSign3] = useState('_')
+    const [sign4, setSign4] = useState('_')
+    const [sign5, setSign5] = useState('_')
+    const [sign6, setSign6] = useState('_')
+    const [sign7, setSign7] = useState('_')
+    const [sign8, setSign8] = useState('_')
+    const [xo, updateXo] = useState(true)
+
+
 
     function changeEle0(){
+        changeSign0()
+        changeXo()
         updateEle0(prevEle0 => !prevEle0)
     }
     function changeEle1(){
+        changeSign1()
+        changeXo()
         updateEle1(prevEle1 => !prevEle1)
     }
     function changeEle2(){
+        changeSign2()
+        changeXo()
         updateEle2(prevEle2 => !prevEle2)
     }
     function changeEle3(){
+        changeSign3()
+        changeXo()
         updateEle3(prevEle3 => !prevEle3)
     }
     function changeEle4(){
+        changeSign4()
+        changeXo()
         updateEle4(prevEle4 => !prevEle4)
     }
     function changeEle5(){
+        changeSign5()
+        changeXo()
         updateEle5(prevEle5 => !prevEle5)
     }
     function changeEle6(){
+        changeSign6()
+        changeXo()
         updateEle6(prevEle6 => !prevEle6)
     }
     function changeEle7(){
+        changeSign7()
+        changeXo()
         updateEle7(prevEle7 => !prevEle7)
     }
     function changeEle8(){
+        changeSign8()
+        changeXo()
         updateEle8(prevEle8 => !prevEle8)
+    }
+    function changeSign0(){
+        xo? setSign0('X'):setSign0('O')
+    }
+    function changeSign1(){
+        xo? setSign1('X'):setSign1('O')
+    }
+    function changeSign2(){
+        xo? setSign2('X'):setSign2('O')
+    }
+    function changeSign3(){
+        xo? setSign3('X'):setSign3('O')
+    }    function changeSign4(){
+        xo? setSign4('X'):setSign4('O')
+    }
+    function changeSign5(){
+        xo? setSign5('X'):setSign5('O')
+    }
+    function changeSign6(){
+        xo? setSign6('X'):setSign6('O')
+    }
+    function changeSign7(){
+        xo? setSign7('X'):setSign7('O')
+    }
+    function changeSign8(){
+        xo? setSign8('X'):setSign8('O')
+    }
+    function changeXo(){
+        updateXo(prevXo => !prevXo)
     }
     return (
         <>
@@ -62,31 +123,31 @@ function MyGrid() {
                 <ThemeProvider >
                     <Grid container spacing={2}>
                         <Grid item xs={4} >
-                            <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0? 12:0}>{ele0? '_':'X'}</Paper>
+                            <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0? 12:0}>{sign0}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle1} className={classes.paper1} square elevation={ele1? 12:0}>{ele1? '_':'X'}</Paper>
+                            <Paper onClick={changeEle1} className={classes.paper1} square elevation={ele1? 12:0}>{sign1}</Paper>
                         </Grid>
                         <Grid item xs={4} >
-                            <Paper onClick={changeEle2} className={classes.paper1} square elevation={ele2? 12:0}>{ele2? '_':'X'}</Paper>
+                            <Paper onClick={changeEle2} className={classes.paper1} square elevation={ele2? 12:0}>{sign2}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle3} className={classes.paper1} square elevation={ele3? 12:0}>{ele3? '_':'X'}</Paper>
+                            <Paper onClick={changeEle3} className={classes.paper1} square elevation={ele3? 12:0}>{sign3}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle4} className={classes.paper1} square elevation={ele4? 12:0}>{ele4? '_':'X'}</Paper>
+                            <Paper onClick={changeEle4} className={classes.paper1} square elevation={ele4? 12:0}>{sign4}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle5} className={classes.paper1} square elevation={ele5? 12:0}>{ele5? '_':'X'}</Paper>
+                            <Paper onClick={changeEle5} className={classes.paper1} square elevation={ele5? 12:0}>{sign5}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle6} className={classes.paper1} square elevation={ele6? 12:0}>{ele6? '_':'X'}</Paper>
+                            <Paper onClick={changeEle6} className={classes.paper1} square elevation={ele6? 12:0}>{sign6}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle7} className={classes.paper1} square elevation={ele7? 12:0}>{ele7? '_':'X'}</Paper>
+                            <Paper onClick={changeEle7} className={classes.paper1} square elevation={ele7? 12:0}>{sign7}</Paper>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper onClick={changeEle8} className={classes.paper1} square elevation={ele8? 12:0}>{ele8? '_':'X'}</Paper>
+                            <Paper onClick={changeEle8} className={classes.paper1} square elevation={ele8? 12:0}>{sign8}</Paper>
                         </Grid>
                     </Grid>
                 </ThemeProvider>
