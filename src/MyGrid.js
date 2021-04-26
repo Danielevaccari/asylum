@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Paper, ThemeProvider, makeStyles } from '@material-ui/core'
-
-
+import { Grid, Paper, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
     paper1: {
@@ -48,54 +46,63 @@ function MyGrid() {
         changeXo()
         updateEle0(prevEle0 => !prevEle0)
         checkVictory()
+        console.log(w)
     }
     function changeEle1() {
         changeSign1()
         changeXo()
         updateEle1(prevEle1 => !prevEle1)
         checkVictory()
+        console.log(w)
     }
     function changeEle2() {
         changeSign2()
         changeXo()
         updateEle2(prevEle2 => !prevEle2)
         checkVictory()
+        console.log(w)
     }
     function changeEle3() {
         changeSign3()
         changeXo()
         updateEle3(prevEle3 => !prevEle3)
         checkVictory()
+        console.log(w)
     }
     function changeEle4() {
         changeSign4()
         changeXo()
         updateEle4(prevEle4 => !prevEle4)
         checkVictory()
+        console.log(w)
     }
     function changeEle5() {
         changeSign5()
         changeXo()
         updateEle5(prevEle5 => !prevEle5)
         checkVictory()
+        console.log(w)
     }
     function changeEle6() {
         changeSign6()
         changeXo()
         updateEle6(prevEle6 => !prevEle6)
         checkVictory()
+        console.log(w)
     }
     function changeEle7() {
         changeSign7()
         changeXo()
         updateEle7(prevEle7 => !prevEle7)
         checkVictory()
+        console.log(w)
     }
     function changeEle8() {
         changeSign8()
         changeXo()
         updateEle8(prevEle8 => !prevEle8)
         checkVictory()
+        console.log(w)
     }
     function changeSign0() {
         xo ? setSign0('X') : setSign0('O')
@@ -130,91 +137,89 @@ function MyGrid() {
     function changeW() {
         updateW(prevW => true)
     }
-    //These check if victory is achieved
+    //These check if victory is achieved HAS FAULT
     function checkVictory() {
-        if ({ sign0: 'X' } && { sign1: 'X' } && { sign2: 'X' }) {
+        if (sign0 === 'X' && sign1 === 'X' && sign2 === 'X') {
             changeW()
         }
-        if ({ sign3: 'X' } && { sign4: 'X' } && { sign5: 'X' }) {
+        if (sign3 === 'X' && sign4 === 'X' && sign5 === 'X') {
             changeW()
         }
-        if ({ sign6: 'X' } && { sign7: 'X' } && { sign8: 'X' }) {
+        if (sign6 === 'X' && sign7 === 'X' && sign8 === 'X') {
             changeW()
         }
-        if ({ sign0: 'X' } && { sign3: 'X' } && { sign6: 'X' }) {
+        if (sign0 === 'X' && sign3 === 'X' && sign6 === 'X') {
             changeW()
         }
-        if ({ sign2: 'X' } && { sign4: 'X' } && { sign7: 'X' }) {
+        if (sign2 === 'X' && sign4 === 'X' && sign7 === 'X') {
             changeW()
         }
-        if ({ sign2: 'X' } && { sign5: 'X' } && { sign8: 'X' }) {
+        if (sign2 === 'X' && sign5 === 'X' && sign8 === 'X') {
             changeW()
         }
-        if ({ sign0: 'X' } && { sign4: 'X' } && { sign8: 'X' }) {
+        if (sign0 === 'X' && sign4 === 'X' && sign8 === 'X') {
             changeW()
         }
-        if ({ sign6: 'X' } && { sign4: 'X' } && { sign2: 'X' }) {
+        if (sign6 === 'X' && sign4 === 'X' && sign2 === 'X') {
             changeW()
         }
-        if ({ sign0: 'O' } && { sign1: 'O' } && { sign2: 'O' }) {
+        if (sign0 === 'O' && sign1 === 'O' && sign2 === 'O') {
             changeW()
         }
-        if ({ sign3: 'O' } && { sign4: 'O' } && { sign5: 'O' }) {
+        if (sign3 === 'O' && sign4 === 'O' && sign5 === 'O') {
             changeW()
         }
-        if ({ sign6: 'O' } && { sign7: 'O' } && { sign8: 'O' }) {
+        if (sign6 === 'O' && sign7 === 'O' && sign8 === 'O') {
             changeW()
         }
-        if ({ sign0: 'O' } && { sign3: 'O' } && { sign6: 'O' }) {
+        if (sign0 === 'O' && sign3 === 'O' && sign6 === 'O') {
             changeW()
         }
-        if ({ sign2: 'O' } && { sign4: 'O' } && { sign7: 'O' }) {
+        if (sign2 === 'O' && sign4 === 'O' && sign7 === 'O') {
             changeW()
         }
-        if ({ sign2: 'O' } && { sign5: 'O' } && { sign8: 'O' }) {
+        if (sign2 === 'O' && sign5 === 'O' && sign8 === 'O') {
             changeW()
         }
-        if ({ sign0: 'O' } && { sign4: 'O' } && { sign8: 'O' }) {
+        if (sign0 === 'O' && sign4 === 'O' && sign8 === 'O') {
             changeW()
         }
-        if ({ sign6: 'O' } && { sign4: 'O' } && { sign2: 'O' }) {
+        if (sign6 === 'O' && sign4 === 'O' && sign2 === 'O') {
             changeW()
         }
     }
     return (
         <>
             <div className='divStyle'>
-                <ThemeProvider>
-                    <Grid container spacing={2}>
-                        <Grid item xs={4} >
-                            <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0 ? 12 : 0}>{sign0}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle1} className={classes.paper1} square elevation={ele1 ? 12 : 0}>{sign1}</Paper>
-                        </Grid>
-                        <Grid item xs={4} >
-                            <Paper onClick={changeEle2} className={classes.paper1} square elevation={ele2 ? 12 : 0}>{sign2}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle3} className={classes.paper1} square elevation={ele3 ? 12 : 0}>{sign3}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle4} className={classes.paper1} square elevation={ele4 ? 12 : 0}>{sign4}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle5} className={classes.paper1} square elevation={ele5 ? 12 : 0}>{sign5}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle6} className={classes.paper1} square elevation={ele6 ? 12 : 0}>{sign6}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle7} className={classes.paper1} square elevation={ele7 ? 12 : 0}>{sign7}</Paper>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Paper onClick={changeEle8} className={classes.paper1} square elevation={ele8 ? 12 : 0}>{sign8}</Paper>
-                        </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={4} >
+                        <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0 ? 12 : 0}>{sign0}</Paper>
                     </Grid>
-                </ThemeProvider>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle1} className={classes.paper1} square elevation={ele1 ? 12 : 0}>{sign1}</Paper>
+                    </Grid>
+                    <Grid item xs={4} >
+                        <Paper onClick={changeEle2} className={classes.paper1} square elevation={ele2 ? 12 : 0}>{sign2}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle3} className={classes.paper1} square elevation={ele3 ? 12 : 0}>{sign3}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle4} className={classes.paper1} square elevation={ele4 ? 12 : 0}>{sign4}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle5} className={classes.paper1} square elevation={ele5 ? 12 : 0}>{sign5}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle6} className={classes.paper1} square elevation={ele6 ? 12 : 0}>{sign6}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle7} className={classes.paper1} square elevation={ele7 ? 12 : 0}>{sign7}</Paper>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Paper onClick={changeEle8} className={classes.paper1} square elevation={ele8 ? 12 : 0}>{sign8}</Paper>
+                    </Grid>
+                </Grid>
             </div>
         </>
     )
