@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grid, Paper, makeStyles } from '@material-ui/core'
+import Popper from './Popper'
 
 const useStyles = makeStyles({
     paper1: {
@@ -41,68 +42,57 @@ function MyGrid() {
     const [xo, updateXo] = useState(true)
     const [w, updateW] = useState(false)
 
-    function changeEle0() {
-        changeSign0()
+    useEffect(() => {
         changeXo()
+        console.log('nyt')
+        console.log(w)
+
+    }, [sign0,sign1, sign2, sign3,sign4,sign5,sign6,sign7,sign8,w])
+
+    const changeEle0 = () => {
+        changeSign0()
         updateEle0(prevEle0 => !prevEle0)
         checkVictory()
-        console.log(w)
     }
     function changeEle1() {
         changeSign1()
-        changeXo()
         updateEle1(prevEle1 => !prevEle1)
         checkVictory()
-        console.log(w)
     }
     function changeEle2() {
         changeSign2()
-        changeXo()
         updateEle2(prevEle2 => !prevEle2)
         checkVictory()
-        console.log(w)
     }
     function changeEle3() {
         changeSign3()
-        changeXo()
         updateEle3(prevEle3 => !prevEle3)
         checkVictory()
-        console.log(w)
     }
     function changeEle4() {
         changeSign4()
-        changeXo()
         updateEle4(prevEle4 => !prevEle4)
         checkVictory()
-        console.log(w)
     }
     function changeEle5() {
         changeSign5()
-        changeXo()
         updateEle5(prevEle5 => !prevEle5)
         checkVictory()
-        console.log(w)
     }
     function changeEle6() {
         changeSign6()
-        changeXo()
         updateEle6(prevEle6 => !prevEle6)
         checkVictory()
-        console.log(w)
     }
     function changeEle7() {
         changeSign7()
-        changeXo()
         updateEle7(prevEle7 => !prevEle7)
         checkVictory()
-        console.log(w)
     }
     function changeEle8() {
         changeSign8()
-        changeXo()
         updateEle8(prevEle8 => !prevEle8)
         checkVictory()
-        console.log(w)
     }
     function changeSign0() {
         xo ? setSign0('X') : setSign0('O')
@@ -135,10 +125,10 @@ function MyGrid() {
         updateXo(prevXo => !prevXo)
     }
     function changeW() {
-        updateW(prevW => true)
+        updateW(true)
     }
     //These check if victory is achieved HAS FAULT
-    function checkVictory() {
+    const checkVictory = () => {
         if (sign0 === 'X' && sign1 === 'X' && sign2 === 'X') {
             changeW()
         }
@@ -190,6 +180,7 @@ function MyGrid() {
     }
     return (
         <>
+        {w && <Popper/>}
             <div className='divStyle'>
                 <Grid container spacing={2}>
                     <Grid item xs={4} >
