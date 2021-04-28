@@ -44,88 +44,89 @@ function MyGrid() {
 
     useEffect(() => {
         changeXo()
-        console.log('nyt')
-        console.log(w)
+    }, [sign0, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8])
 
-    }, [sign0,sign1, sign2, sign3,sign4,sign5,sign6,sign7,sign8,w])
+    useEffect(() => {
+        checkVictory()
+    })
 
     const changeEle0 = () => {
         changeSign0()
         updateEle0(prevEle0 => !prevEle0)
         checkVictory()
     }
-    function changeEle1() {
+    const changeEle1 = () => {
         changeSign1()
         updateEle1(prevEle1 => !prevEle1)
         checkVictory()
     }
-    function changeEle2() {
+    const changeEle2 = () => {
         changeSign2()
         updateEle2(prevEle2 => !prevEle2)
         checkVictory()
     }
-    function changeEle3() {
+    const changeEle3 = () => {
         changeSign3()
         updateEle3(prevEle3 => !prevEle3)
         checkVictory()
     }
-    function changeEle4() {
+    const changeEle4 = () => {
         changeSign4()
         updateEle4(prevEle4 => !prevEle4)
         checkVictory()
     }
-    function changeEle5() {
+    const changeEle5 = () => {
         changeSign5()
         updateEle5(prevEle5 => !prevEle5)
         checkVictory()
     }
-    function changeEle6() {
+    const changeEle6 = () => {
         changeSign6()
         updateEle6(prevEle6 => !prevEle6)
         checkVictory()
     }
-    function changeEle7() {
+    const changeEle7 = () => {
         changeSign7()
         updateEle7(prevEle7 => !prevEle7)
         checkVictory()
     }
-    function changeEle8() {
+    const changeEle8 = () => {
         changeSign8()
         updateEle8(prevEle8 => !prevEle8)
         checkVictory()
     }
-    function changeSign0() {
+    const changeSign0 = () => {
         xo ? setSign0('X') : setSign0('O')
     }
-    function changeSign1() {
+    const changeSign1 = () => {
         xo ? setSign1('X') : setSign1('O')
     }
-    function changeSign2() {
+    const changeSign2 = () => {
         xo ? setSign2('X') : setSign2('O')
     }
-    function changeSign3() {
+    const changeSign3 = () => {
         xo ? setSign3('X') : setSign3('O')
     }
-    function changeSign4() {
+    const changeSign4 = () => {
         xo ? setSign4('X') : setSign4('O')
     }
-    function changeSign5() {
+    const changeSign5 = () => {
         xo ? setSign5('X') : setSign5('O')
     }
-    function changeSign6() {
+    const changeSign6 = () => {
         xo ? setSign6('X') : setSign6('O')
     }
-    function changeSign7() {
+    const changeSign7 = () => {
         xo ? setSign7('X') : setSign7('O')
     }
-    function changeSign8() {
+    const changeSign8 = () => {
         xo ? setSign8('X') : setSign8('O')
     }
-    function changeXo() {
+    const changeXo = () => {
         updateXo(prevXo => !prevXo)
     }
-    function changeW() {
-        updateW(true)
+    const changeW = () => {
+        updateW(w => true)
     }
     //These check if victory is achieved HAS FAULT
     const checkVictory = () => {
@@ -141,7 +142,7 @@ function MyGrid() {
         if (sign0 === 'X' && sign3 === 'X' && sign6 === 'X') {
             changeW()
         }
-        if (sign2 === 'X' && sign4 === 'X' && sign7 === 'X') {
+        if (sign1 === 'X' && sign4 === 'X' && sign7 === 'X') {
             changeW()
         }
         if (sign2 === 'X' && sign5 === 'X' && sign8 === 'X') {
@@ -165,7 +166,7 @@ function MyGrid() {
         if (sign0 === 'O' && sign3 === 'O' && sign6 === 'O') {
             changeW()
         }
-        if (sign2 === 'O' && sign4 === 'O' && sign7 === 'O') {
+        if (sign1 === 'O' && sign4 === 'O' && sign7 === 'O') {
             changeW()
         }
         if (sign2 === 'O' && sign5 === 'O' && sign8 === 'O') {
@@ -180,7 +181,7 @@ function MyGrid() {
     }
     return (
         <>
-        {w && <Popper/>}
+            {w && <Popper />}
             <div className='divStyle'>
                 <Grid container spacing={2}>
                     <Grid item xs={4} >
