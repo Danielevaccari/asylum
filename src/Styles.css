@@ -1,26 +1,40 @@
-.background{
-    height: 100vh;
-    background: linear-gradient(180deg,lightgrey 40%,rgb(83, 71, 52) 100%);
+.background {
+    height    : 100vh;
+    background: linear-gradient(180deg, lightgrey 40%, rgb(83, 71, 52) 100%);
 }
-.introStyle{
-    text-align: center;
-    height: 100px;
-    background: linear-gradient(0deg,lightgrey 40%,rgb(83, 71, 52)150%);
-    font-size: 4vw;
-    color: rgb(83, 71, 52);
+
+.introStyle {
+    text-align : center;
+    height     : 100px;
+    background : linear-gradient(0deg, lightgrey 40%, rgb(83, 71, 52)150%);
+    font-size  : 4vw;
+    color      : rgb(83, 71, 52);
     font-family: fantasy;
 }
-.introStyle2{
-    text-align: center;
-    height: 30px;
-    background-color:lightgrey;
+
+.introStyle2 {
+    text-align      : center;
+    height          : 30px;
+    background-color: lightgrey;
 }
-.divStyle{
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+
+.divStyle {
+    margin          : 0 auto;
+    align-items     : center;
+    justify-content : center;
+    display         : flex;
     background-color: black 70%;
-    text-align: center;
-    width: 30vw;
+    text-align      : center;
+    width           : 30vw;
+}
+
+.pUp {
+    color          : rgb(236, 120, 120);
+    align-items    : center;
+    justify-content: center;
+    display        : flex;
+    outline        : 0;
+    font-size      : 200px;
+    height         : 100vh;
+
 }
