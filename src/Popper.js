@@ -8,7 +8,7 @@ const popper= (props) => {
             <Modal open={true}>
                 <h1 className='pUp'>
                     Victory !
-                    <h1 className='rStart'>
+                    <h1 className='rStart' onClick={props.c}>
                         [Restart]
                     </h1>
                 </h1>

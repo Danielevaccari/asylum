@@ -126,7 +126,20 @@ function MyGrid() {
         updateXo(prevXo => !prevXo)
     }
     const changeW = () => {
-        updateW(w => true)
+        updateW(true)
+    }
+    const restart = () =>{
+        updateW(false)
+        setSign0('_')
+        setSign1('_')
+        setSign2('_')
+        setSign3('_')
+        setSign4('_')
+        setSign5('_')
+        setSign6('_')
+        setSign7('_')
+        setSign8('_')
+
     }
     //These check if victory is achieved HAS FAULT
     const checkVictory = () => {
@@ -181,7 +194,7 @@ function MyGrid() {
     }
     return (
         <>
-        {w && <Popper />}
+        {w && <Popper c={restart}/>}
             <div className='divStyle'>
                 <Grid container spacing={2}>
                     <Grid item xs={4} >
