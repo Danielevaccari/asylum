@@ -29,12 +29,19 @@
 }
 
 .pUp {
-    color          : rgb(236, 120, 120);
+    color          : rgb(9, 27, 41);
+    background     : linear-gradient(180deg, grey 40%, rgb(0, 21, 21) 100%);
     align-items    : center;
     justify-content: center;
     display        : flex;
+    margin         : auto;
     outline        : 0;
-    font-size      : 200px;
-    height         : 100vh;
+    font-size      : 4vw;
+    height         : 200px;
 
+}
+
+.rStart {
+    color    : black;
+    font-size: 4vw;
 }

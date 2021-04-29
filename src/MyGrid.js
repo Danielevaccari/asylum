@@ -181,7 +181,7 @@ function MyGrid() {
     }
     return (
         <>
-            {w && <Popper />}
+        {w && <Popper />}
             <div className='divStyle'>
                 <Grid container spacing={2}>
                     <Grid item xs={4} >
@@ -213,6 +213,7 @@ function MyGrid() {
                     </Grid>
                 </Grid>
             </div>
+            
         </>
     )
 }
