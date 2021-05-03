@@ -6,12 +6,12 @@ const popper= (props) => {
     return (
         <>
             <Modal open={true}>
-                <h1 className='pUp'>
+                <div className='pUp'>
                     Victory !
-                    <h1 className='rStart' onClick={props.c}>
+                    <h2 className='rStart' onClick={props.c}>
                         [Restart]
-                    </h1>
-                </h1>
+                    </h2>
+                </div>
             </Modal>
         </>
     )

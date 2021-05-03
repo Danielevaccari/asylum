@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Grid, Paper, makeStyles } from '@material-ui/core'
 import Popper from './Popper'
 
@@ -41,7 +41,20 @@ function MyGrid() {
     //Defines if O||X is set
     const [xo, updateXo] = useState(true)
     const [w, updateW] = useState(false)
-
+   
+    const restart = useCallback(() =>{
+        updateW(false)
+        setSign0('_')
+        setSign1('_')
+        setSign2('_')
+        setSign3('_')
+        setSign4('_')
+        setSign5('_')
+        setSign6('_')
+        setSign7('_')
+        setSign8('_')
+        rEle()
+    }, [])
     useEffect(() => {
         changeXo()
     }, [sign0, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8])
@@ -49,6 +62,9 @@ function MyGrid() {
     useEffect(() => {
         checkVictory()
     })
+    useEffect(() => {
+        restart()
+    }, [restart])
 
     const changeEle0 = () => {
         changeSign0()
@@ -128,20 +144,18 @@ function MyGrid() {
     const changeW = () => {
         updateW(true)
     }
-    const restart = () =>{
-        updateW(false)
-        setSign0('_')
-        setSign1('_')
-        setSign2('_')
-        setSign3('_')
-        setSign4('_')
-        setSign5('_')
-        setSign6('_')
-        setSign7('_')
-        setSign8('_')
-
+    const rEle = () =>{
+        updateEle0(true)
+        updateEle1(true)
+        updateEle2(true)
+        updateEle3(true)
+        updateEle4(true)
+        updateEle5(true)
+        updateEle6(true)
+        updateEle7(true)
+        updateEle8(true)
     }
-    //These check if victory is achieved HAS FAULT
+    //These check if victory is achieved
     const checkVictory = () => {
         if (sign0 === 'X' && sign1 === 'X' && sign2 === 'X') {
             changeW()
@@ -196,7 +210,7 @@ function MyGrid() {
         <>
         {w && <Popper c={restart}/>}
             <div className='divStyle'>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
                     <Grid item xs={4} >
                         <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0 ? 12 : 0}>{sign0}</Paper>
                     </Grid>
