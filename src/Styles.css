@@ -1,6 +1,6 @@
 .background {
     height    : 100vh;
-    background: linear-gradient(180deg, lightgrey 40%, rgb(83, 71, 52) 100%);
+    background: rgb(211, 211, 211)
 }
 
 .introStyle {
@@ -21,18 +21,18 @@
 }
 
 .divStyle {
-    margin          : 0 auto;
-    align-items     : center;
-    justify-content : center;
-    display         : flex;
-    text-align      : center;
-    width           : 40%;
-    height          : 100%;
+    margin         : 0 auto;
+    align-items    : center;
+    justify-content: center;
+    display        : flex;
+    text-align     : center;
+    width          : 40%;
+    height         : 100%;
 }
 
 .pUp {
     color          : rgb(9, 27, 41);
-    background     : linear-gradient(180deg, grey 40%, rgb(0, 21, 21) 100%);
+    background     : grey;
     align-items    : center;
     justify-content: center;
     display        : flex;
