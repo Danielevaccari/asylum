@@ -210,7 +210,7 @@ function MyGrid() {
         <>
         {w && <Popper c={restart}/>}
             <div className='divStyle'>
-                <Grid container spacing={3}>
+                <Grid container spacing={1}>
                     <Grid item xs={4} >
                         <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0 ? 12 : 0}>{sign0}</Paper>
                     </Grid>

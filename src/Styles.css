@@ -10,12 +10,14 @@
     font-size  : 4vw;
     color      : rgb(83, 71, 52);
     font-family: fantasy;
+    height     : 3vw;
 }
 
 .introStyle2 {
     text-align      : center;
     height          : 30px;
     background-color: lightgrey;
+    height          : 2vw;
 }
 
 .divStyle {
@@ -23,10 +25,9 @@
     align-items     : center;
     justify-content : center;
     display         : flex;
-    background-color: black 70%;
     text-align      : center;
-    width           : 30vw;
-    height          : 50vw;
+    width           : 50%;
+    height          : 100%;
 }
 
 .pUp {
@@ -38,7 +39,7 @@
     margin         : auto;
     outline        : 0;
     font-size      : 4vw;
-    height         : 200px;
+    height         : 100%;
 
 }
 
