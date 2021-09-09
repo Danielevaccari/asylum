@@ -12,7 +12,12 @@ const useStyles = makeStyles({
         width: '100%',
         height: '100%',
         fontSize: '7vw',
-        elevation: '12'
+        elevation: '12',
+        minHeight: '85px',
+        minWidth: '85px'
+    },
+    gridContainer: {
+        height: '100%'
     }
 })
 function MyGrid() {
@@ -29,30 +34,30 @@ function MyGrid() {
     const [ele7, updateEle7] = useState(true)
     const [ele8, updateEle8] = useState(true)
     //Sets O||X in gridcomponents
-    const [sign0, setSign0] = useState('_')
-    const [sign1, setSign1] = useState('_')
-    const [sign2, setSign2] = useState('_')
-    const [sign3, setSign3] = useState('_')
-    const [sign4, setSign4] = useState('_')
-    const [sign5, setSign5] = useState('_')
-    const [sign6, setSign6] = useState('_')
-    const [sign7, setSign7] = useState('_')
-    const [sign8, setSign8] = useState('_')
+    const [sign0, setSign0] = useState('')
+    const [sign1, setSign1] = useState('')
+    const [sign2, setSign2] = useState('')
+    const [sign3, setSign3] = useState('')
+    const [sign4, setSign4] = useState('')
+    const [sign5, setSign5] = useState('')
+    const [sign6, setSign6] = useState('')
+    const [sign7, setSign7] = useState('')
+    const [sign8, setSign8] = useState('')
     //Defines if O||X is set
     const [xo, updateXo] = useState(true)
     const [w, updateW] = useState(false)
-   
-    const restart = useCallback(() =>{
+
+    const restart = useCallback(() => {
         updateW(false)
-        setSign0('_')
-        setSign1('_')
-        setSign2('_')
-        setSign3('_')
-        setSign4('_')
-        setSign5('_')
-        setSign6('_')
-        setSign7('_')
-        setSign8('_')
+        setSign0('')
+        setSign1('')
+        setSign2('')
+        setSign3('')
+        setSign4('')
+        setSign5('')
+        setSign6('')
+        setSign7('')
+        setSign8('')
         rEle()
     }, [])
     useEffect(() => {
@@ -144,7 +149,7 @@ function MyGrid() {
     const changeW = () => {
         updateW(true)
     }
-    const rEle = () =>{
+    const rEle = () => {
         updateEle0(true)
         updateEle1(true)
         updateEle2(true)
@@ -208,9 +213,9 @@ function MyGrid() {
     }
     return (
         <>
-        {w && <Popper c={restart}/>}
+            {w && <Popper c={restart} />}
             <div className='divStyle'>
-                <Grid container spacing={1}>
+                <Grid className={classes.gridContainer} container spacing={1}>
                     <Grid item xs={4} >
                         <Paper onClick={changeEle0} className={classes.paper1} square elevation={ele0 ? 12 : 0}>{sign0}</Paper>
                     </Grid>
@@ -240,7 +245,7 @@ function MyGrid() {
                     </Grid>
                 </Grid>
             </div>
-            
+
         </>
     )
 }
