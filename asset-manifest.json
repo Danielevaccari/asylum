@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/asylum/static/css/main.b6b6ebad.chunk.css",
-    "main.js": "/asylum/static/js/main.b9fe83c7.chunk.js",
-    "main.js.map": "/asylum/static/js/main.b9fe83c7.chunk.js.map",
+    "main.css": "/asylum/static/css/main.6e3a9a1c.chunk.css",
+    "main.js": "/asylum/static/js/main.d32280c4.chunk.js",
+    "main.js.map": "/asylum/static/js/main.d32280c4.chunk.js.map",
     "runtime-main.js": "/asylum/static/js/runtime-main.a1cfce2b.js",
     "runtime-main.js.map": "/asylum/static/js/runtime-main.a1cfce2b.js.map",
     "static/js/2.269083e6.chunk.js": "/asylum/static/js/2.269083e6.chunk.js",
     "static/js/2.269083e6.chunk.js.map": "/asylum/static/js/2.269083e6.chunk.js.map",
     "index.html": "/asylum/index.html",
-    "static/css/main.b6b6ebad.chunk.css.map": "/asylum/static/css/main.b6b6ebad.chunk.css.map",
+    "static/css/main.6e3a9a1c.chunk.css.map": "/asylum/static/css/main.6e3a9a1c.chunk.css.map",
     "static/js/2.269083e6.chunk.js.LICENSE.txt": "/asylum/static/js/2.269083e6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a1cfce2b.js",
     "static/js/2.269083e6.chunk.js",
-    "static/css/main.b6b6ebad.chunk.css",
-    "static/js/main.b9fe83c7.chunk.js"
+    "static/css/main.6e3a9a1c.chunk.css",
+    "static/js/main.d32280c4.chunk.js"
   ]
 }
